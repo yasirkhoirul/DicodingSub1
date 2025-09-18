@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:submissiondicoding/signup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -132,7 +133,9 @@ class _LoginMobileState extends State<LoginMobile> {
                         children: [
                           Text("ke halaman pendaftaran "),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+                            },
                             child: Text(
                               "Daftar",
                               style: TextStyle(
@@ -266,7 +269,9 @@ class _Form extends State {
               children: [
                 Text("ke halaman pendaftaran "),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Signup()));
+                  },
                   child: Text(
                     "Daftar",
                     style: TextStyle(
