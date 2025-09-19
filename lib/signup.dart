@@ -78,28 +78,26 @@ class Signupmobile extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Container(
           margin: EdgeInsets.all(20),
           child: Column(
             children: [
               Expanded(
-                
                 child: Center(
-                  child: SingleChildScrollView(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset("images/logofix.png"),
-                        SizedBox(height: 10,),
-                        Text("Pendaftaran Akun"),
-                      ],
-                    ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset("images/logofix.png"),
+                      SizedBox(height: 10,),
+                      Text("Pendaftaran Akun"),
+                    ],
                   ),
                 ),
               ),
-              Expanded( child: Formsignup()),
+              Expanded( child: SingleChildScrollView(child: Formsignup())),
             ],
           ),
         ),
