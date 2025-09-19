@@ -86,14 +86,16 @@ class Signupmobile extends StatelessWidget{
             children: [
               Expanded(
                 child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Image.asset("images/logofix.png"),
-                      SizedBox(height: 10,),
-                      Text("Pendaftaran Akun"),
-                    ],
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Image.asset("images/logofix.png"),
+                        SizedBox(height: 10,),
+                        Text("Pendaftaran Akun"),
+                      ],
+                    ),
                   ),
                 ),
               ),
