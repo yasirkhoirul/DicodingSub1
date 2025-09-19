@@ -20,41 +20,52 @@ class Sigupweb extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       body: SafeArea(child: 
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Expanded(flex: 2,child: Center(child: Text("Singup",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold,color: Colors.green),))),
-            Expanded(
-              flex: 8,
-              child: Row(
+        Container(
+          
+          padding: EdgeInsets.all(10),
+          height: double.infinity,
+          child: SingleChildScrollView(
+            child: SizedBox(
+              height: 500,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Expanded(child: 
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                  Expanded(flex: 2,child: Center(child: Text("Singup",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold,color: Colors.green),))),
+                  Expanded(
+                    flex: 8,
+                    child: Row(
                       children: [
-                        Image.asset(
-                          "images/logofix.png"
+                        Expanded(child: 
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                "images/logofix.png"
+                              ),
+                              SizedBox(height: 10,),
+                              Text('Welcome to Green Aplication')
+                            ],
+                          )
                         ),
-                        SizedBox(height: 10,),
-                        Text('Welcome to Green Aplication')
+                        Expanded(child: 
+                          Container(
+                            margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                            child: Card(
+                              child: Padding(padding: EdgeInsetsGeometry.all(20),child: Formsignup()),
+                            ),
+                          )
+                        )
                       ],
-                    )
-                  ),
-                  Expanded(child: 
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-                      child: Card(
-                        child: Padding(padding: EdgeInsetsGeometry.all(20),child: Formsignup()),
-                      ),
-                    )
+                    ),
                   )
                 ],
               ),
-            )
-          ],
+            ),
+          ),
         )
       ),
     );
@@ -113,7 +124,7 @@ class _Formsignup extends State {
   String? repassword;
   Text? isi;
   bool cek() {
-    if (password != repassword || password == null || username == null || repassword == null) {
+    if (password != repassword || password == null || username == null || repassword ==null) {
       return false;
     } else {
       return true;

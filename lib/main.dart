@@ -168,22 +168,24 @@ class LoginWeb extends StatelessWidget {
         child: Container(
           margin: EdgeInsets.all(12),
           height: double.infinity,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset("images/logofix.png"),
-                    SizedBox(height: 10),
-                    Text("Welcome To Green Aplication"),
-                  ],
+          child: SingleChildScrollView(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset("images/logofix.png"),
+                      SizedBox(height: 10),
+                      Text("Welcome To Green Aplication"),
+                    ],
+                  ),
                 ),
-              ),
-              Expanded(child: Form()),
-            ],
+                Expanded(child: Form()),
+              ],
+            ),
           ),
         ),
       ),
